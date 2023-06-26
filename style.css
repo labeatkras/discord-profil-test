@@ -1,0 +1,207 @@
+/* General Styling */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "open sans", sans-serif;
+  font-size: 16px;
+  color: grey;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+:root {
+  --bg-body: #e8eaec;
+  --bg-content: #ffffff;
+  --online-c: #209a54;
+  --text-c: #000000;
+}
+h1,
+h3 {
+  color: var(--text-c);
+}
+h1 {
+  margin: 0;
+}
+
+::selection {
+}
+
+/******* Specific Styling *********/
+
+.card {
+  width: 30rem;
+  height: 40rem;
+  background-color: var(--bg-body);
+}
+
+header {
+  width: 30rem;
+  height: 6rem;
+  background-color: var(--text-c);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.body {
+  padding-inline: 1rem;
+  padding-bottom: 1rem;
+  width: 30rem;
+  height: 40rem;
+}
+
+.content {
+  background-color: var(--bg-content);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+/********* PROFILE PICTURE START *******/
+
+.img-wrapper {
+  width: fit-content;
+  margin-bottom: 1rem;
+  margin-top: -60px;
+  position: relative;
+}
+
+.img-wrapper::after {
+  content: "";
+  background-color: var(--online-c);
+
+  width: 25px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 5px solid var(--bg-body);
+
+  position: absolute;
+  bottom: 1rem;
+  right: 0.5rem;
+}
+
+.profile-img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  border: 0.5rem solid var(--bg-body);
+}
+
+/********* PROFILE PICTURE END *******/
+
+.profile-name p {
+  margin-top: 0px;
+}
+
+/******* MEMBER SINCE START *****/
+
+.profile-info h3 {
+  margin-bottom: 0px;
+}
+
+.membership {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+.usersince {
+  display: flex;
+  gap: 0.5rem;
+}
+.worksince {
+  display: flex;
+  gap: 0.7rem;
+}
+.usersince::before {
+  content: url(images/discord.svg);
+}
+.worksince::before {
+  content: "";
+  padding-right: 10px;
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #6a1cc3;
+}
+
+/******** MEMBER SINCE END ********/
+
+/******* ROLLES START *******/
+
+.roles h3 {
+  margin-top: 5px;
+}
+.roles-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.role {
+  background-color: var(--bg-body);
+  padding: 0.25rem 0.75rem;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.role::before {
+  content: "";
+  background-color: black;
+  display: inline-block;
+  width: 1rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.role:nth-child(1)::before {
+  background-color: rgb(128, 35, 160);
+}
+.role:nth-child(2)::before {
+  background-color: rgb(22, 87, 105);
+}
+.role:nth-child(3)::before {
+  background-color: rgb(128, 35, 160);
+}
+.role:nth-child(4)::before {
+  background-color: rgb(186, 195, 192);
+}
+.plus {
+  background-color: var(--bg-body);
+  padding: 0.25rem 0.75rem;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+/******* ROLLES END ********/
+
+textarea {
+  font-family: open sans, sans-serif;
+  color: var(--text-c);
+  padding: 10px;
+  max-width: 100%;
+  border-radius: 5px;
+  border: 1px solid var(--bg-body);
+  box-shadow: 1px 1px 1px var(--bg-body);
+}
+
+textarea::selection {
+  border-color: green;
+}
